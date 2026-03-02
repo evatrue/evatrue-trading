@@ -25,7 +25,24 @@
 
           <div class="product-detail">
             <div>
-              <img class="product-detail-img" src="logo.png" alt="Car Wiper Blade Restorer Tool" />
+              <div class="main-photo">
+          <img id="mainImg" class="product-detail-img" src="wiper-restorer-1.png" alt="Car Wiper Blade Restorer Tool" />
+        </div>
+
+        <div class="thumb-row" aria-label="Product photos">
+          <button class="thumb active" type="button" data-img="1" aria-label="Photo 1">
+            <img src="wiper-restorer-1.png" alt="" />
+          </button>
+          <button class="thumb" type="button" data-img="2" aria-label="Photo 2">
+            <img src="wiper-restorer-2.png" alt="" />
+          </button>
+          <button class="thumb" type="button" data-img="3" aria-label="Photo 3">
+            <img src="wiper-restorer-3.png" alt="" />
+          </button>
+          <button class="thumb" type="button" data-img="4" aria-label="Photo 4">
+            <img src="wiper-restorer-4.png" alt="" />
+          </button>
+        </div>
             </div>
 
             <div class="product-detail-body">
@@ -51,5 +68,19 @@
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-  </body>
+  
+  <script>
+    // Simple photo switcher (same behaviour as other product galleries)
+    const mainImg = document.getElementById("mainImg");
+    document.querySelectorAll(".thumb").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const key = btn.getAttribute("data-img");
+        mainImg.src = `wiper-restorer-${key}.png`;
+        document.querySelectorAll(".thumb").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+      });
+    });
+  </script>
+
+</body>
 </html>
