@@ -25,13 +25,19 @@
 
           <div class="product-detail">
             <div>
-  
-<img id="mainProductImage" src="car-seat-gap-filler-black.png" alt="Essential Car Seat Gap Filler" class="main-product-image">
- <div class="thumbnail-row">
-  <img class="thumb" src="car-seat-gap-filler-black.png" alt="Black" onclick="setMainImage('car-seat-gap-filler-black.png')">
-  <img class="thumb" src="car-seat-gap-filler-brown.png" alt="Brown" onclick="setMainImage('car-seat-gap-filler-brown.png')">
-  <img class="thumb" src="car-seat-gap-filler-beige.png" alt="Beige" onclick="setMainImage('car-seat-gap-filler-beige.png')">
-  <img class="thumb" src="car-seat-gap-filler-red.png" alt="Red" onclick="setMainImage('car-seat-gap-filler-red.png')">
+  <img
+    id="mainImg"
+    class="product-detail-img"
+    src="car-seat-gap-filler-black.png"
+    alt="Essential Car Seat Gap Filler (Black)"
+  />
+
+  <div class="thumb-row thumb-row--contain" aria-label="Choose a colour">
+    <button class="thumb active" data-img="black"><img src="car-seat-gap-filler-black.png" alt="Black" /></button>
+    <button class="thumb" data-img="brown"><img src="car-seat-gap-filler-brown.png" alt="Brown" /></button>
+    <button class="thumb" data-img="beige"><img src="car-seat-gap-filler-beige.png" alt="Beige" /></button>
+    <button class="thumb" data-img="red"><img src="car-seat-gap-filler-red.png" alt="Red" /></button>
+  </div>
 </div>
 
             <div class="product-detail-body">
@@ -71,10 +77,5 @@
     });
   });
 </script>
-    <script>
-  function setMainImage(fileName) {
-    document.getElementById('mainProductImage').src = fileName;
-  }
-    </script>
   </body>
 </html>
