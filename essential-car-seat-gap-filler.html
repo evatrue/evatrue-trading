@@ -25,11 +25,25 @@
 
           <div class="product-detail">
             <div>
-              <img class="product-detail-img" src="logo.png" alt="Essential Car Seat Gap Filler" />
-            </div>
+  <img
+    id="mainImg"
+    class="product-detail-img"
+    src="car-seat-gap-filler-black.png"
+    alt="Essential Car Seat Gap Filler (Black)"
+  />
+
+  <div class="thumb-row thumb-row--contain" aria-label="Choose a colour">
+    <button class="thumb active" data-img="black"><img src="car-seat-gap-filler-black.png" alt="Black" /></button>
+    <button class="thumb" data-img="brown"><img src="car-seat-gap-filler-brown.png" alt="Brown" /></button>
+    <button class="thumb" data-img="beige"><img src="car-seat-gap-filler-beige.png" alt="Beige" /></button>
+    <button class="thumb" data-img="red"><img src="car-seat-gap-filler-red.png" alt="Red" /></button>
+  </div>
+</div>
 
             <div class="product-detail-body">
               <p class="product-desc" style="max-width: 560px">Keep small items from slipping between your seats with this simple everyday solution.<br>The Essential Car Seat Gap Filler helps protect your phone, keys, coins, and cards while keeping your car interior neat and organized.<br>Easy to install and designed for daily convenience.</p>
+
+              <p class="note">Available colours: Black, Brown, Beige, Red.</p>
 
               <div class="cta-row">
                 <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
@@ -49,7 +63,19 @@
     </footer>
 
     <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+  // Footer year (if present)
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  const mainImg = document.getElementById('mainImg');
+  document.querySelectorAll('.thumb').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.thumb').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const key = btn.getAttribute('data-img');
+      mainImg.src = `car-seat-gap-filler-${key}.png`;
+    });
+  });
+</script>
   </body>
 </html>
