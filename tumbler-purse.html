@@ -13,7 +13,9 @@
         <div class="brand-mini">
           <img class="brand-mini-logo" src="logo.png" alt="EvaRight" />
         </div>
-        <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">
+          Order on WhatsApp
+        </a>
       </div>
     </header>
 
@@ -25,6 +27,7 @@
 
           <div class="product-detail">
             <div>
+              <!-- MAIN IMAGE -->
               <img
                 id="mainImg"
                 class="product-detail-img"
@@ -32,21 +35,43 @@
                 alt="Luxury Travel Tumbler Purse"
               />
 
+              <!-- THUMBNAILS -->
               <div class="thumb-row" aria-label="Choose a colour">
-                <button class="thumb" data-img="black"><img src="tumbler-purse-black.png" alt="Black" /></button>
-                <button class="thumb" data-img="blue"><img src="tumbler-purse-blue.png" alt="Blue" /></button>
-                <button class="thumb" data-img="brown"><img src="tumbler-purse-brown.png" alt="Brown" /></button>
-                <button class="thumb" data-img="white"><img src="tumbler-purse-white.png" alt="White" /></button>
-                <button class="thumb" data-img="pink"><img src="tumbler-purse-pink.png" alt="Pink" /></button>
-                <button class="thumb" data-img="purple"><img src="tumbler-purse-purple.png" alt="Purple" /></button>
+                <button class="thumb" data-img="black">
+                  <img src="tumbler-purse-black.png" alt="Black" />
+                </button>
+
+                <button class="thumb" data-img="blue">
+                  <img src="tumbler-purse-blue.png" alt="Blue" />
+                </button>
+
+                <button class="thumb" data-img="brown">
+                  <img src="tumbler-purse-brown.png" alt="Brown" />
+                </button>
+
+                <button class="thumb" data-img="white">
+                  <img src="tumbler-purse-white.png" alt="White" />
+                </button>
+
+                <button class="thumb" data-img="pink">
+                  <img src="tumbler-purse-pink.png" alt="Pink" />
+                </button>
+
+                <button class="thumb" data-img="purple">
+                  <img src="tumbler-purse-purple.png" alt="Purple" />
+                </button>
               </div>
             </div>
 
+            <!-- PRODUCT DETAILS -->
             <div class="product-detail-body">
               <p class="product-desc" style="max-width: 560px">
-                Stylish crossbody purse designed to hold your tumbler on one side and your essentials on the other.
-                Fits most tumblers (including Stanley-style cups). <strong>Tumbler not included.</strong>
+                Stylish crossbody purse designed to hold your tumbler on one side
+                and your essentials on the other.
+                Fits most tumblers (including Stanley-style cups).
+                <strong>Tumbler not included.</strong>
               </p>
+
               <ul class="bullets">
                 <li>Divider design: one side for your tumbler, one side for phone/wallet/keys</li>
                 <li>Crossbody strap for hands-free travel</li>
@@ -54,10 +79,18 @@
               </ul>
 
               <div class="cta-row">
-                <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
-                <a class="btn btn-outline" href="travel-bags-storage.html">Back to Bags, Travel & Storage</a>
+                <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">
+                  Order on WhatsApp
+                </a>
+                <a class="btn btn-outline" href="travel-bags-storage.html">
+                  Back to Bags, Travel & Storage
+                </a>
               </div>
-              <p class="note">Tip: When you message, tell us the colour you want (Black, Blue, Brown, White, Pink or Purple).</p>
+
+              <p class="note">
+                Tip: When you message, tell us the colour you want
+                (Black, Blue, Brown, White, Pink or Purple).
+              </p>
             </div>
           </div>
         </div>
@@ -70,14 +103,17 @@
       </div>
     </footer>
 
+    <!-- SCRIPT -->
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
 
       const mainImg = document.getElementById('mainImg');
+
       document.querySelectorAll('.thumb').forEach((btn) => {
         btn.addEventListener('click', () => {
           const key = btn.getAttribute('data-img');
-          mainImg.src = `../assets/products/tumbler-purse/${key}.png`;
+          mainImg.src = `tumbler-purse-${key}.png`;
+          mainImg.alt = `Luxury Travel Tumbler Purse - ${key}`;
         });
       });
     </script>
