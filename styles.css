@@ -359,3 +359,23 @@ h2{
 .thumbnail-row .thumb.active {
   border-color: #c8a96b;
 }
+
+.product-card-img {
+  position: relative;
+}
+
+.product-card-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.coming-soon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
