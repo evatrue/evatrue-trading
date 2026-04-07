@@ -391,43 +391,41 @@ h2{
   text-decoration: underline;
 }
 
-/* Logo sparkle animation */
+/* EvaTrue logo shooting star animation */
 
 .logo-wrapper {
   position: relative;
   display: inline-block;
 }
 
-.logo-sparkle {
+.shooting-star {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  width: 8px;
-  height: 8px;
-  background: #d4af37;
-  border-radius: 50%;
+  top: 25%;
+  left: -100px;
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffff, #d4af37, transparent);
   opacity: 0;
-  box-shadow: 0 0 8px #d4af37, 0 0 16px #fff;
-  animation: sparkle 3s ease-in-out infinite;
+  transform: rotate(-15deg);
+  animation: shootingStar 2.4s ease-out 0.8s forwards;
 }
 
-@keyframes sparkle {
+@keyframes shootingStar {
   0% {
-    transform: scale(0.2);
     opacity: 0;
+    transform: translateX(0) rotate(-15deg);
   }
 
-  20% {
-    transform: scale(1);
+  10% {
     opacity: 1;
   }
 
-  40% {
-    transform: scale(0.3);
-    opacity: 0;
+  80% {
+    opacity: 1;
   }
 
   100% {
+    transform: translateX(460px) rotate(-15deg);
     opacity: 0;
   }
 }
