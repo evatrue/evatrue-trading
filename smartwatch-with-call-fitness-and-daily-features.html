@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Everyday Smartwatch with Call & Fitness Features | EvaTrue</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container page-header-inner">
+        <a class="back-link" href="phone-power-essentials.html">← Back</a>
+        <div class="brand-mini">
+          <img class="brand-mini-logo" src="logo.png" alt="EvaTrue" />
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel panel-dark">
+        <div class="container">
+          <h1 class="section-title">Everyday Smartwatch with Call & Fitness Features</h1>
+          <p class="product-price" style="margin-top: -6px">TT$200</p>
+
+          <div class="product-detail">
+            <div class="product-gallery">
+              <div class="main-image">
+                <img id="mainProductImage" class="product-detail-img" src="smartwatch-1.jpg" alt="Everyday Smartwatch with Call & Fitness Features" />
+              </div>
+
+              <div class="thumbnail-row">
+                <img src="smartwatch-1.jpg" alt="Everyday Smartwatch 1" class="thumb active" onclick="changeMainImage(this)">
+                <img src="smartwatch-2.jpg" alt="Everyday Smartwatch 2" class="thumb" onclick="changeMainImage(this)">
+                <img src="smartwatch-3.jpg" alt="Everyday Smartwatch 3" class="thumb" onclick="changeMainImage(this)">
+                <img src="smartwatch-4.jpg" alt="Everyday Smartwatch 4" class="thumb" onclick="changeMainImage(this)">
+              </div>
+            </div>
+
+            <div class="product-detail-body">
+              <p class="product-desc" style="max-width: 560px">
+                It’s not just a watch… it’s your daily upgrade.<br>
+                This sleek everyday smartwatch keeps calls, fitness tracking, notifications, and daily tools right on your wrist.<br>
+                Answer calls directly from your watch, track your heart rate, monitor sleep, control music, and stay active with multiple sport modes.<br>
+                Designed for convenience, style, and everyday use with custom watch faces, smart alarm, IP67 water resistance, and up to 5 days battery life.
+              </p>
+
+              <p>Features: Call answering, heart rate tracking, sport modes, sleep monitoring, music control, remote camera control, notifications, custom watch faces, smart alarm, up to 5 days battery life, IP67 water resistance.</p>
+
+              <div class="cta-row">
+                <a class="btn btn-primary" href="https://wa.me/18687626589" target="_blank" rel="noopener">Order on WhatsApp</a>
+                <a class="btn btn-outline" href="phone-power-essentials.html">Back to Tech & Charging Essentials</a>
+              </div>
+
+              <p class="note">
+                Tip: When you message, tell us the product name so we can help you quickly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> EvaTrue</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      function changeMainImage(clickedThumb) {
+        document.getElementById('mainProductImage').src = clickedThumb.src;
+
+        document.querySelectorAll('.thumbnail-row .thumb').forEach(img => {
+          img.classList.remove('active');
+        });
+
+        clickedThumb.classList.add('active');
+      }
+    </script>
+  </body>
+</html>
